@@ -1,0 +1,12 @@
+export const CONTACT_LISTS = 'Contacts';
+export const CONTACT_DETAIL = 'Contact detail';
+export const CREATE_CONTACT = 'Create Contact';
+export const SETTINGS = 'Settings';
+export const LOGIN = 'Log In';
+export const REGISTER = 'Register';
+export const HOME_NAVIGATOR = 'Home';
+export const HISTORY = 'History';
+export const AGREEMENT = 'Agreement';
+export const HELP = 'Help';
+export const ABOUT = 'About';
+export const SAFETY_CENTER = 'Safety center';
