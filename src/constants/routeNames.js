@@ -10,3 +10,4 @@ export const AGREEMENT = 'Agreement';
 export const HELP = 'Help';
 export const ABOUT = 'About';
 export const SAFETY_CENTER = 'Safety center';
+export const MAP = 'Map';
