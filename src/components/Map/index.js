@@ -6,9 +6,8 @@ import MapView from 'react-native-maps';
 
 const MapComponent = () => {
   return (
-    <Container>
+    <Container style={styles.container}>
       <View style={styles.body}>
-        <Text>Map</Text>
         <MapView
           style={styles.map}
           initialRegion={{
