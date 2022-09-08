@@ -12,6 +12,7 @@ export default StyleSheet.create({
     font: 12,
     color: '#666666',
     paddingTop: 90,
+    paddingBottom: 10,
   },
 
   textStyle: {
@@ -26,12 +27,39 @@ export default StyleSheet.create({
     marginTop: 40,
   },
 
-  section: {
-    borderBottomWidth: 0.2,
-    borderBottomColor: '#666666',
+  sectionDark: {
+    display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     height: 60,
     alignItems: 'center',
+    backgroundColor: '#E4E4E4',
+    marginHorizontal: -20,
+    paddingHorizontal: 20,
+  },
+
+  sectionLight: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    height: 60,
+    alignItems: 'center',
+    marginHorizontal: -20,
+    paddingHorizontal: 20,
+  },
+
+  iconImage2: {
+    aspectRatio: 1.5,
+    flex: 1,
+    height: 50,
+    alignSelf: 'flex-end',
+  },
+
+  iconImage1: {
+    aspectRatio: 1.5,
+    flex: 1,
+    height: 50,
+    alignSelf: 'flex-end',
+    opacity: 0,
   },
 });

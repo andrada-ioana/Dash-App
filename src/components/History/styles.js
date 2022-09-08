@@ -25,14 +25,14 @@ export default StyleSheet.create({
   iconImage: {
     aspectRatio: 1.5,
     flex: 1,
-    height: 40,
+    height: 50,
     alignSelf: 'flex-end',
   },
 
   iconImage2: {
     aspectRatio: 1.5,
     flex: 1,
-    height: 40,
+    height: 50,
     alignSelf: 'flex-end',
     opacity: 0,
   },
