@@ -4,7 +4,7 @@ import {Image, Text, View} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import Container from '../../components/common/Container';
 import styles from './styles';
-import {REGISTER} from '../../constants/routeNames';
+import {HOME_NAVIGATOR, REGISTER} from '../../constants/routeNames';
 
 const HistoryComponent = () => {
   const {navigate} = useNavigation();
@@ -12,14 +12,16 @@ const HistoryComponent = () => {
     <Container>
       <View style={styles.navBar}>
         <TouchableOpacity>
-          {/*nu face nimic*/}
           <Image
             source={require('../../assets/images/xIcon.png')}
             style={styles.iconImage2}
           />
         </TouchableOpacity>
         <Text style={styles.title}>History</Text>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigate(HOME_NAVIGATOR);
+          }}>
           <Image
             source={require('../../assets/images/xIcon.png')}
             style={styles.iconImage}

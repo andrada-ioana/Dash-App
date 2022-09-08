@@ -30,7 +30,7 @@ const RegisterComponent = ({onSubmit, onChange, form, errors}) => {
               onChangeText={value => {
                 onChange({name: 'firstName', value});
               }}
-              error={errors.firstName}
+              //error={errors.firstName}
             />
 
             <Input
@@ -41,7 +41,7 @@ const RegisterComponent = ({onSubmit, onChange, form, errors}) => {
               onChangeText={value => {
                 onChange({name: 'lastName', value});
               }}
-              error={errors.lastName}
+              //error={errors.lastName}
             />
           </View>
 
@@ -53,7 +53,7 @@ const RegisterComponent = ({onSubmit, onChange, form, errors}) => {
             onChangeText={value => {
               onChange({name: 'email', value});
             }}
-            error={errors.email}
+            //error={errors.email}
           />
 
           <Input
@@ -65,7 +65,7 @@ const RegisterComponent = ({onSubmit, onChange, form, errors}) => {
             onChangeText={value => {
               onChange({name: 'password', value});
             }}
-            error={errors.password}
+            //error={errors.password}
           />
 
           <CustomButton onPress={onSubmit} primary title="Sign up" />

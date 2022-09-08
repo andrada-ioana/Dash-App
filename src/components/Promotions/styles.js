@@ -42,6 +42,26 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
 
+  icon: {
+    flexDirection: 'row',
+    display: 'flex',
+  },
+
+  iconImage2: {
+    aspectRatio: 1.5,
+    flex: 1,
+    height: 50,
+    alignSelf: 'flex-end',
+  },
+
+  iconImage1: {
+    aspectRatio: 1.5,
+    flex: 1,
+    height: 50,
+    alignSelf: 'flex-end',
+    opacity: 0,
+  },
+
   sectionDark: {
     display: 'flex',
     flexDirection: 'row',
@@ -61,25 +81,5 @@ export default StyleSheet.create({
     alignItems: 'center',
     marginHorizontal: -20,
     paddingHorizontal: 20,
-  },
-
-  icon: {
-    flexDirection: 'row',
-    display: 'flex',
-  },
-
-  iconImage2: {
-    aspectRatio: 1.5,
-    flex: 1,
-    height: 50,
-    alignSelf: 'flex-end',
-  },
-
-  iconImage1: {
-    aspectRatio: 1.5,
-    flex: 1,
-    height: 50,
-    alignSelf: 'flex-end',
-    opacity: 0,
   },
 });

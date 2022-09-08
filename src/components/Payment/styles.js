@@ -3,6 +3,7 @@ import {StyleSheet} from 'react-native';
 export default StyleSheet.create({
   title: {
     fontSize: 20,
+    paddingTop: 0,
     textAlign: 'center',
     fontWeight: '700',
   },
@@ -11,16 +12,13 @@ export default StyleSheet.create({
     font: 12,
     color: '#666666',
     paddingTop: 90,
-  },
-
-  iconImage: {
-    marginRight: 10,
-    height: 18,
-    width: 18,
+    fontWeight: 'bold',
+    paddingBottom: 10,
   },
 
   textStyle: {
-    fontSize: 16,
+    fontSize: 14,
+    marginLeft: 10,
   },
 
   navBar: {
@@ -29,23 +27,25 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginTop: 40,
-    paddingBottom: 77,
   },
 
-  section: {
-    borderBottomWidth: 0.2,
-    display: 'flex',
-    borderBottomColor: '#666666',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    height: 60,
-    alignItems: 'center',
+  checkbox: {
+    alignSelf: 'flex-start',
+  },
+
+  message: {
+    fontSize: 14,
+    lineHeight: 23,
+  },
+
+  learnMoreBtn: {
+    color: '#7E5ABB',
+    marginTop: 10,
   },
 
   sectionDark: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
     height: 60,
     alignItems: 'center',
     backgroundColor: '#E4E4E4',
@@ -56,16 +56,10 @@ export default StyleSheet.create({
   sectionLight: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
     height: 60,
     alignItems: 'center',
     marginHorizontal: -20,
     paddingHorizontal: 20,
-  },
-
-  icon: {
-    flexDirection: 'row',
-    display: 'flex',
   },
 
   iconImage2: {

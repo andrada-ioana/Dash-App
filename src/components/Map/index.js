@@ -3,6 +3,9 @@ import {View, Text} from 'react-native';
 import styles from './styles';
 import Container from '../common/Container';
 import MapView from 'react-native-maps';
+import {createDrawerNavigator} from '@react-navigation/drawer';
+import {HOME_NAVIGATOR} from '../../constants/routeNames';
+import HomeNavigator from '../../navigations/HomeNavigator';
 
 const MapComponent = () => {
   return (

@@ -14,6 +14,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginTop: 40,
+    marginBottom: 74,
   },
 
   linkBtnClosePage: {
@@ -40,9 +41,8 @@ export default StyleSheet.create({
   logoImage: {
     aspectRatio: 1.5,
     flex: 1,
-    height: 200,
+    height: 260,
     alignSelf: 'center',
-    marginTop: 100,
   },
 
   linkBtn: {

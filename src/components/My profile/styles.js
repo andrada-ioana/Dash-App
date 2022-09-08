@@ -3,6 +3,7 @@ import {StyleSheet} from 'react-native';
 export default StyleSheet.create({
   title: {
     fontSize: 20,
+    paddingTop: 0,
     textAlign: 'center',
     fontWeight: '700',
   },
@@ -13,14 +14,9 @@ export default StyleSheet.create({
     paddingTop: 90,
   },
 
-  iconImage: {
-    marginRight: 10,
-    height: 18,
-    width: 18,
-  },
-
   textStyle: {
     fontSize: 16,
+    paddingTop: 5,
   },
 
   navBar: {
@@ -29,17 +25,51 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginTop: 40,
-    paddingBottom: 77,
   },
 
   section: {
     borderBottomWidth: 0.2,
-    display: 'flex',
     borderBottomColor: '#666666',
     flexDirection: 'row',
     justifyContent: 'space-between',
     height: 60,
     alignItems: 'center',
+  },
+
+  iconImage3: {
+    aspectRatio: 1,
+    flex: 0.45,
+    alignSelf: 'flex-end',
+    borderRadius: 100,
+    marginRight: 15,
+  },
+
+  linkBtn: {
+    color: '#7E5ABB',
+    fontWeight: 'bold',
+    textAlign: 'left',
+    fontSize: 16,
+  },
+
+  actionRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingTop: 28,
+  },
+
+  iconImage2: {
+    aspectRatio: 1.5,
+    flex: 1,
+    height: 50,
+    alignSelf: 'flex-end',
+  },
+
+  iconImage1: {
+    aspectRatio: 1.5,
+    flex: 1,
+    height: 50,
+    alignSelf: 'flex-end',
+    opacity: 0,
   },
 
   sectionDark: {
@@ -61,25 +91,5 @@ export default StyleSheet.create({
     alignItems: 'center',
     marginHorizontal: -20,
     paddingHorizontal: 20,
-  },
-
-  icon: {
-    flexDirection: 'row',
-    display: 'flex',
-  },
-
-  iconImage2: {
-    aspectRatio: 1.5,
-    flex: 1,
-    height: 50,
-    alignSelf: 'flex-end',
-  },
-
-  iconImage1: {
-    aspectRatio: 1.5,
-    flex: 1,
-    height: 50,
-    alignSelf: 'flex-end',
-    opacity: 0,
   },
 });

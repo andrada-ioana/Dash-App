@@ -14,6 +14,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginTop: 40,
+    marginBottom: 74,
   },
 
   linkBtnClosePage: {
@@ -24,25 +25,28 @@ export default StyleSheet.create({
 
   iconImage: {
     aspectRatio: 1.5,
-    flex: 1,
-    height: 50,
+    flex: 0.1,
+    height: 10,
     alignSelf: 'flex-end',
+    marginTop: -270,
+    position: 'relative',
+    zIndex: 5,
   },
 
   iconImage2: {
     aspectRatio: 1.5,
     flex: 1,
-    height: 50,
-    alignSelf: 'flex-end',
-    opacity: 0,
+    height: 180,
+    alignSelf: 'center',
+    marginVertical: 25,
   },
 
   logoImage: {
-    aspectRatio: 1.5,
+    aspectRatio: 1.4,
     flex: 1,
-    height: 200,
+    height: 280,
     alignSelf: 'center',
-    marginTop: 100,
+    marginTop: 20,
   },
 
   linkBtn: {

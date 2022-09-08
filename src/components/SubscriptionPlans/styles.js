@@ -14,6 +14,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginTop: 40,
+    marginBottom: 74,
   },
 
   linkBtnClosePage: {
