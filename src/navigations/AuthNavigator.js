@@ -42,11 +42,14 @@ const AuthNavigator = () => {
   const AuthStack = createStackNavigator();
   return (
     <AuthStack.Navigator screenOptions={{headerShown: false}}>
-      <AuthStack.Screen name={REFERRAL} component={Referral} />
+      <AuthStack.Screen name={LOGIN} component={Login} />
+      <AuthStack.Screen name={REGISTER} component={Register} />
     </AuthStack.Navigator>
   );
 };
 /**
+ * <AuthStack.Screen name={SCAN_QR} component={ScanQR} />
+ *       <AuthStack.Screen name={REFERRAL} component={Referral} />
 <AuthStack.Screen name={PROMOTIONS} component={Promotions} />
  * <AuthStack.Screen name={SUBSCRIPTION} component={Subscription} />
  * <AuthStack.Screen name={VIP} component={Vip} />
@@ -56,11 +59,10 @@ const AuthNavigator = () => {
  <AuthStack.Screen name={SAFETY_CENTER} component={SafetyCenter} />
        <AuthStack.Screen name={ABOUT} component={About} />
       <AuthStack.Screen name={HELP} component={Help} />
-      <AuthStack.Screen name={AGREEMENT} component={Agreement} />
       <AuthStack.Screen name={HISTORY} component={History} />
       <AuthStack.Screen name={MENU} component={Menu} />
-             <AuthStack.Screen name={LOGIN} component={Login} />
-      <AuthStack.Screen name={REGISTER} component={Register} />
+      <AuthStack.Screen name={AGREEMENT} component={Agreement} />
+
 <AuthStack.Screen name={MY_PROFILE} component={MyProfile} />
       <AuthStack.Screen name={ADD_CARD} component={AddCard} />
  */

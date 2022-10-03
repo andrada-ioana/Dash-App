@@ -54,7 +54,7 @@ const SubscriptionComponent = () => {
             }}>
             1
           </Text>
-          <Text style={{fontSize: 10, paddingBottom: 12}}>hour</Text>
+          <Text style={{fontSize: 12, paddingBottom: 12}}>hour</Text>
           <Text style={{fontWeight: 'bold', fontSize: 16, paddingBottom: 5}}>
             9,99 RON
           </Text>
@@ -76,7 +76,7 @@ const SubscriptionComponent = () => {
             }}>
             24
           </Text>
-          <Text style={{fontSize: 10, paddingBottom: 12}}>hours</Text>
+          <Text style={{fontSize: 12, paddingBottom: 12}}>hours</Text>
           <Text style={{fontWeight: 'bold', fontSize: 16, paddingBottom: 5}}>
             39,99 RON
           </Text>
@@ -98,7 +98,7 @@ const SubscriptionComponent = () => {
             }}>
             72
           </Text>
-          <Text style={{fontSize: 10, paddingBottom: 12}}>hours</Text>
+          <Text style={{fontSize: 12, paddingBottom: 12}}>hours</Text>
           <Text style={{fontWeight: 'bold', fontSize: 16, paddingBottom: 5}}>
             99,99 RON
           </Text>
@@ -125,12 +125,12 @@ const SubscriptionComponent = () => {
           Reserve your bike for 30 minutes with no charges
         </Text>
       </View>
-      <View style={{paddingTop: '95%'}}>
-        <Text style={{fontSize: 10}}>
+      <View style={{paddingTop: '90%'}}>
+        <Text style={{fontSize: 12, marginBottom: 5}}>
           Every subscription plan will be in effect for the chosen period of
           time from the moment of acquisition.{' '}
         </Text>
-        <Text style={{fontSize: 10}}>
+        <Text style={{fontSize: 12}}>
           *Standard rates apply after 120 minutes per ride.
         </Text>
       </View>

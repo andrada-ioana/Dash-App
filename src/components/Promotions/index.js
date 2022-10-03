@@ -79,20 +79,16 @@ const PromotionsComponent = () => {
           borderRadius: 10,
           height: 60,
           alignItems: 'center',
-          paddingHorizontal: 8,
+          paddingHorizontal: 20,
           marginBottom: 15,
         }}>
         <View>
           <Text style={{fontSize: 16, color: 'white', fontWeight: 'bold'}}>
             15% off for 5 rides
           </Text>
-          <Text style={{fontSize: 10, color: 'white', fontWeight: 'bold'}}>
-            Max 3 RON off.
-          </Text>
+          <Text style={{fontSize: 12, color: 'white'}}>Max 3 RON off.</Text>
         </View>
-        <Text style={{fontSize: 12, color: 'white', fontWeight: 'bold'}}>
-          3 RIDES LEFT
-        </Text>
+        <Text style={{fontSize: 12, color: 'white'}}>3 RIDES LEFT</Text>
       </View>
       <View
         style={{
@@ -102,20 +98,16 @@ const PromotionsComponent = () => {
           borderRadius: 10,
           height: 60,
           alignItems: 'center',
-          paddingHorizontal: 8,
+          paddingHorizontal: 20,
           marginBottom: 15,
         }}>
         <View>
           <Text style={{fontSize: 16, color: 'white', fontWeight: 'bold'}}>
             5% off any ride!
           </Text>
-          <Text style={{fontSize: 10, color: 'white', fontWeight: 'bold'}}>
-            Max 3 RON off.
-          </Text>
+          <Text style={{fontSize: 12, color: 'white'}}>Max 3 RON off.</Text>
         </View>
-        <Text style={{fontSize: 12, color: 'white', fontWeight: 'bold'}}>
-          EXPIRES IN 22H
-        </Text>
+        <Text style={{fontSize: 12, color: 'white'}}>EXPIRES IN 22H</Text>
       </View>
       <View
         style={{
@@ -125,15 +117,15 @@ const PromotionsComponent = () => {
           height: 60,
           backgroundColor: '#E4E4E4',
           alignItems: 'center',
-          paddingHorizontal: 8,
+          paddingHorizontal: 20,
         }}>
         <View>
-          <Text style={{fontSize: 16, fontWeight: 'bold'}}>
+          <Text style={{fontSize: 16, fontWeight: 'bold', color: '#666666'}}>
             15% off for 5 rides
           </Text>
-          <Text style={{fontSize: 10, fontWeight: 'bold'}}>Max 3 RON off.</Text>
+          <Text style={{fontSize: 12, color: '#666666'}}>Max 3 RON off.</Text>
         </View>
-        <Text style={{fontSize: 12, fontWeight: 'bold'}}>EXPIRED</Text>
+        <Text style={{fontSize: 12, color: '#666666'}}>EXPIRED</Text>
       </View>
     </Container>
   );

@@ -23,6 +23,7 @@ export default StyleSheet.create({
   },
 
   iconImage: {
+    marginRight: -20,
     aspectRatio: 1.5,
     flex: 1,
     height: 50,
@@ -30,6 +31,7 @@ export default StyleSheet.create({
   },
 
   iconImage2: {
+    marginLeft: -20,
     aspectRatio: 1.5,
     flex: 1,
     height: 50,

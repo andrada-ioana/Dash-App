@@ -14,10 +14,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginTop: 40,
-  },
-
-  form: {
-    paddingTop: 77,
+    marginBottom: 38,
   },
 
   createSection: {
@@ -52,11 +49,12 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#E4E4E4',
+    marginBottom: 15,
   },
 
   cardInputs: {
     flexDirection: 'row',
-    alignItems: 'flex-end',
+    alignItems: 'center',
   },
 
   dropDownStyle: {
@@ -66,5 +64,22 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+  },
+
+  iconImage: {
+    marginRight: -20,
+    aspectRatio: 1.5,
+    flex: 1,
+    height: 50,
+    alignSelf: 'flex-end',
+  },
+
+  iconImage2: {
+    marginLeft: -20,
+    aspectRatio: 1.5,
+    flex: 1,
+    height: 50,
+    alignSelf: 'flex-end',
+    opacity: 0,
   },
 });

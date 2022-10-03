@@ -7,7 +7,11 @@ const HomeNavigator = () => {
   const HomeStack = createStackNavigator();
   return (
     <HomeStack.Navigator initialRouteName={MAP}>
-      <HomeStack.Screen name={MAP} component={Map} />
+      <HomeStack.Screen
+        name={MAP}
+        component={Map}
+        options={{headerShown: false}}
+      />
     </HomeStack.Navigator>
   );
 };

@@ -1,5 +1,8 @@
 import React from 'react';
-import {createDrawerNavigator} from '@react-navigation/drawer';
+import {
+  createDrawerNavigator,
+  DrawerToggleButton,
+} from '@react-navigation/drawer';
 import HomeNavigator from './HomeNavigator';
 import {
   ABOUT,
@@ -16,6 +19,10 @@ import {
   REFERRAL,
   SUBSCRIPTION,
   VIP,
+  AGREEMENT,
+  LOGIN,
+  MAP,
+  MENU,
 } from '../constants/routeNames';
 import MenuComponent from '../components/Menu';
 import RegisterComponent from '../components/Signup';
@@ -31,12 +38,34 @@ import PromotionsComponent from '../components/Promotions';
 import ReferralComponent from '../components/Referral';
 import SubscriptionComponent from '../components/SubscriptionPlans';
 import VipComponent from '../components/VIP';
+import AgreementComponent from '../components/Agreement';
+import LoginComponent from '../components/Login';
+import MapComponent from '../components/Map';
+import {Image} from 'react-native';
 
 const DrawerNavigator = ({navigation}) => {
   const Drawer = createDrawerNavigator();
   return (
     <Drawer.Navigator drawerContent={() => <MenuComponent />}>
-      <Drawer.Screen name={HOME_NAVIGATOR} component={HomeNavigator} />
+      <Drawer.Screen
+        name={HOME_NAVIGATOR}
+        component={HomeNavigator}
+        options={{
+          headerShown: true,
+          headerTransparent: true,
+          title: false,
+          headerTintColor: 'transparent',
+          drawerType: 'front',
+          drawerIcon: () => (
+            <Image source={require('../../src/assets/images/menu.png')} />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name={MENU}
+        component={MenuComponent}
+        options={{headerShown: false}}
+      />
       <Drawer.Screen
         name={REGISTER}
         component={RegisterComponent}
@@ -100,6 +129,16 @@ const DrawerNavigator = ({navigation}) => {
       <Drawer.Screen
         name={VIP}
         component={VipComponent}
+        options={{headerShown: false}}
+      />
+      <Drawer.Screen
+        name={AGREEMENT}
+        component={AgreementComponent}
+        options={{headerShown: false}}
+      />
+      <Drawer.Screen
+        name={LOGIN}
+        component={LoginComponent}
         options={{headerShown: false}}
       />
     </Drawer.Navigator>

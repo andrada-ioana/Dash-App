@@ -1,6 +1,6 @@
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {Image, Text, View} from 'react-native';
+import {Dimensions, Image, Text, View} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import Container from '../../components/common/Container';
 import CustomButton from '../common/CustomButton';
@@ -8,7 +8,7 @@ import SmallerCustomButton from '../common/SmallerCustomButton';
 import styles from './styles';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import { HOME_NAVIGATOR } from '../../constants/routeNames';
+import {HOME_NAVIGATOR} from '../../constants/routeNames';
 
 const VipComponent = () => {
   const {navigate} = useNavigation();
@@ -110,7 +110,7 @@ const VipComponent = () => {
         style={{
           fontWeight: 'bold',
           fontSize: 20,
-          paddingTop: 35,
+          paddingTop: 70,
           paddingBottom: 20,
           alignSelf: 'center',
         }}>
@@ -130,6 +130,15 @@ const VipComponent = () => {
             width: '31%',
             alignItems: 'center',
           }}>
+          <Image
+            source={require('../../assets/images/diamondVIP.png')}
+            style={{
+              width: '120%',
+              position: 'absolute',
+              marginTop: 20,
+              height: 150,
+            }}
+          />
           <Text
             style={{
               fontSize: 36,
@@ -139,7 +148,7 @@ const VipComponent = () => {
             }}>
             1
           </Text>
-          <Text style={{fontSize: 10, paddingBottom: 12}}>month</Text>
+          <Text style={{fontSize: 12, paddingBottom: 12}}>month</Text>
           <Text style={{fontWeight: 'bold', fontSize: 14, paddingBottom: 17}}>
             249,99 RON
           </Text>
@@ -152,6 +161,15 @@ const VipComponent = () => {
             width: '31%',
             alignItems: 'center',
           }}>
+          <Image
+            source={require('../../assets/images/diamondVIP.png')}
+            style={{
+              width: '120%',
+              position: 'absolute',
+              marginTop: 20,
+              height: 150,
+            }}
+          />
           <Text
             style={{
               fontSize: 36,
@@ -161,13 +179,14 @@ const VipComponent = () => {
             }}>
             6
           </Text>
-          <Text style={{fontSize: 10, paddingBottom: 12}}>months</Text>
+          <Text style={{fontSize: 12, paddingBottom: 12}}>months</Text>
           <Text style={{fontWeight: 'bold', fontSize: 14, paddingBottom: 5}}>
             1349,99 RON
           </Text>
-          <Text style={{fontSize: 10}}>10% off!</Text>
+          <Text style={{fontSize: 12}}>10% off!</Text>
           <SmallerCustomButton title={'Select'} />
         </View>
+
         <View
           style={{
             backgroundColor: '#E4E4E4',
@@ -175,6 +194,15 @@ const VipComponent = () => {
             width: '31%',
             alignItems: 'center',
           }}>
+          <Image
+            source={require('../../assets/images/diamondVIP.png')}
+            style={{
+              width: '120%',
+              position: 'absolute',
+              marginTop: 20,
+              height: 150,
+            }}
+          />
           <Text
             style={{
               fontSize: 36,
@@ -184,23 +212,23 @@ const VipComponent = () => {
             }}>
             12
           </Text>
-          <Text style={{fontSize: 10, paddingBottom: 12}}>months</Text>
+          <Text style={{fontSize: 12, paddingBottom: 12}}>months</Text>
           <Text style={{fontWeight: 'bold', fontSize: 14, paddingBottom: 5}}>
             2249,99 RON
           </Text>
-          <Text style={{fontSize: 10}}>25% off!</Text>
+          <Text style={{fontSize: 12}}>25% off!</Text>
           <SmallerCustomButton title={'Select'} />
         </View>
       </View>
       <View style={{paddingTop: 30}}>
-        <Text style={{fontSize: 10}}>
+        <Text style={{fontSize: 12}}>
           Every VIP plan will be in effect for the chosen period of time from
           the moment of acquisition.
         </Text>
-        <Text style={{fontSize: 10}}>
+        <Text style={{fontSize: 12}}>
           *Standard rates apply after 240 minutes per ride.
         </Text>
-        <Text style={{fontSize: 10}}>
+        <Text style={{fontSize: 12}}>
           ** Only if you are a verified driver.
         </Text>
       </View>

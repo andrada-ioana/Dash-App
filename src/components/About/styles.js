@@ -29,24 +29,14 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginTop: 40,
-    paddingBottom: 77,
-  },
-
-  section: {
-    borderBottomWidth: 0.2,
-    display: 'flex',
-    borderBottomColor: '#666666',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    height: 60,
-    alignItems: 'center',
+    marginBottom: 38,
   },
 
   sectionDark: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    height: 60,
+    height: 80,
     alignItems: 'center',
     backgroundColor: '#E4E4E4',
     marginHorizontal: -20,
@@ -57,7 +47,7 @@ export default StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    height: 60,
+    height: 80,
     alignItems: 'center',
     marginHorizontal: -20,
     paddingHorizontal: 20,
@@ -69,6 +59,7 @@ export default StyleSheet.create({
   },
 
   iconImage2: {
+    marginRight: -20,
     aspectRatio: 1.5,
     flex: 1,
     height: 50,
@@ -76,6 +67,7 @@ export default StyleSheet.create({
   },
 
   iconImage1: {
+    marginLeft: -20,
     aspectRatio: 1.5,
     flex: 1,
     height: 50,

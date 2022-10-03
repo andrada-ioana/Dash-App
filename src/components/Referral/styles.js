@@ -24,13 +24,13 @@ export default StyleSheet.create({
   },
 
   iconImage: {
-    aspectRatio: 1.5,
-    flex: 0.1,
-    height: 10,
+    //aspectRatio: 1.5,
+    //flex: 0.1,
+    height: 100,
     alignSelf: 'flex-end',
-    marginTop: -270,
-    position: 'relative',
-    zIndex: 5,
+    position: 'absolute',
+    //bottom: -100,
+    zIndex: 12,
   },
 
   iconImage2: {
@@ -47,6 +47,8 @@ export default StyleSheet.create({
     height: 280,
     alignSelf: 'center',
     marginTop: 20,
+    position: 'relative',
+    zIndex: 20,
   },
 
   linkBtn: {

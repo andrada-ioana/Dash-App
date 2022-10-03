@@ -71,11 +71,9 @@ const PaymentComponent = () => {
             value={samsung}
             onValueChange={samsungButton}
           />
-          <FontAwesome
-            name="apple-pay"
-            size={24}
-            color={'black'}
-            style={{marginLeft: 20}}
+          <Image
+            source={require('../../assets/images/samsungpay.png')}
+            style={{marginLeft: 20, width: 27, height: 27}}
           />
           <Text style={styles.textStyle}>Samsung Pay</Text>
         </View>

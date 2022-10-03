@@ -20,3 +20,4 @@ export const SUBSCRIPTION = 'Subscription';
 export const VIP = 'VIP';
 export const PROMOTIONS = 'Promotions';
 export const REFERRAL = 'Referral';
+export const SCAN_QR = 'Scan QR';

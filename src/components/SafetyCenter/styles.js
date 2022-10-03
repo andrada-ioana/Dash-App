@@ -11,7 +11,7 @@ export default StyleSheet.create({
   subTitle: {
     font: 12,
     color: '#666666',
-    paddingTop: 90,
+    paddingTop: 45,
     paddingBottom: 10,
   },
 
@@ -31,7 +31,7 @@ export default StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    height: 60,
+    height: 80,
     alignItems: 'center',
     backgroundColor: '#E4E4E4',
     marginHorizontal: -20,
@@ -42,13 +42,14 @@ export default StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    height: 60,
+    height: 80,
     alignItems: 'center',
     marginHorizontal: -20,
     paddingHorizontal: 20,
   },
 
   iconImage2: {
+    marginRight: -20,
     aspectRatio: 1.5,
     flex: 1,
     height: 50,
@@ -56,6 +57,7 @@ export default StyleSheet.create({
   },
 
   iconImage1: {
+    marginLeft: -20,
     aspectRatio: 1.5,
     flex: 1,
     height: 50,

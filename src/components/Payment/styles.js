@@ -11,7 +11,7 @@ export default StyleSheet.create({
   subTitle: {
     font: 12,
     color: '#666666',
-    paddingTop: 90,
+    marginTop: 38,
     fontWeight: 'bold',
     paddingBottom: 10,
   },
@@ -63,6 +63,7 @@ export default StyleSheet.create({
   },
 
   iconImage2: {
+    marginRight: -20,
     aspectRatio: 1.5,
     flex: 1,
     height: 50,
@@ -70,6 +71,7 @@ export default StyleSheet.create({
   },
 
   iconImage1: {
+    marginLeft: -20,
     aspectRatio: 1.5,
     flex: 1,
     height: 50,

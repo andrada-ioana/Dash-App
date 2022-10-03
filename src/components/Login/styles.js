@@ -6,7 +6,7 @@ export default StyleSheet.create({
     flex: 1,
     height: 316,
     alignSelf: 'center',
-    marginTop: 25,
+    marginTop: -20,
   },
 
   title: {

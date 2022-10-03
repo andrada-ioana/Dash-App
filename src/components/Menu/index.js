@@ -17,6 +17,10 @@ import {
   REFERRAL,
   SUBSCRIPTION,
   HOME_NAVIGATOR,
+  AGREEMENT,
+  ADD_CARD,
+  LOGIN,
+  MAP,
 } from '../../constants/routeNames';
 import styles from './styles';
 import IconAntDesign from 'react-native-vector-icons/AntDesign';
@@ -55,7 +59,9 @@ const MenuComponent = () => {
               style={styles.iconImage3}
             />
             <View>
-              <Text style={{fontSize: 16, fontWeight: 'bold'}}>Marc Vana</Text>
+              <Text style={{fontSize: 16, fontWeight: 'bold', marginBottom: 5}}>
+                Marc Vana
+              </Text>
               <Text style={{fontSize: 12}}>Edit profile</Text>
             </View>
           </View>
@@ -185,25 +191,6 @@ const MenuComponent = () => {
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {
-            navigate(SAFETY_CENTER);
-          }}>
-          <View
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              marginLeft: 15,
-              marginTop: 25,
-            }}>
-            <Ionicons
-              name="shield-checkmark-outline"
-              size={27}
-              style={{marginRight: 17}}
-            />
-            <Text>Safety center</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => {
             navigate(HELP);
           }}>
           <View
@@ -219,21 +206,6 @@ const MenuComponent = () => {
               style={{marginRight: 17}}
             />
             <Text>Help</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => {
-            navigate(ABOUT);
-          }}>
-          <View
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              marginLeft: 15,
-              marginTop: 25,
-            }}>
-            <SimpleLineIcons name="info" size={24} style={{marginRight: 19}} />
-            <Text>About us</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity
@@ -261,13 +233,12 @@ const MenuComponent = () => {
                 Get VIP Membership
               </Text>
               <Text style={{color: 'white'}}>
-                And enjoy all the benefits and perks which come with this
-                status.
+                And enjoy all the benefits which come with this status.
               </Text>
             </View>
           </View>
         </TouchableOpacity>
-        <Text style={{marginTop: 50}}>Dash v1.5</Text>
+        <Text style={{marginTop: 60}}>Dash v1.5</Text>
       </View>
     </Container>
   );

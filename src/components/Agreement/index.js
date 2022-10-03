@@ -33,9 +33,9 @@ const AgreementComponent = () => {
             <TouchableOpacity>
               <Text style={styles.link}>Privacy Policy</Text>
             </TouchableOpacity>
-            <Text> & </Text>
+            <Text> and </Text>
             <TouchableOpacity>
-              <Text style={styles.link}>Conditions.</Text>
+              <Text style={styles.link}>Terms & Conditions.</Text>
             </TouchableOpacity>
           </Text>
         </View>

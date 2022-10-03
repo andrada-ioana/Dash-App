@@ -36,10 +36,11 @@ const HistoryUserComponent = () => {
               backgroundColor: '#7E5ABB',
               width: 10,
               height: 10,
+              marginLeft: -0.7,
               borderRadius: 100,
             }}
           />
-          <Text style={{marginLeft: 28, fontWeight: 'bold', fontSize: 16}}>
+          <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16}}>
             2022 June
           </Text>
         </View>
@@ -73,7 +74,7 @@ const HistoryUserComponent = () => {
             </View>
             <View style={{marginLeft: 10}}>
               <Text style={{fontSize: 16}}>Electric XX-21</Text>
-              <Text style={{fontSize: 10}}>23 June, 19:06</Text>
+              <Text style={{fontSize: 11}}>23 June, 19:06</Text>
             </View>
           </View>
 
@@ -111,7 +112,7 @@ const HistoryUserComponent = () => {
             </View>
             <View style={{marginLeft: 10}}>
               <Text style={{fontSize: 16}}>Electric XS-19</Text>
-              <Text style={{fontSize: 10}}>23 June, 10:20</Text>
+              <Text style={{fontSize: 11}}>23 June, 10:20</Text>
             </View>
           </View>
 
@@ -126,10 +127,11 @@ const HistoryUserComponent = () => {
               backgroundColor: '#7E5ABB',
               width: 10,
               height: 10,
+              marginLeft: -0.7,
               borderRadius: 100,
             }}
           />
-          <Text style={{marginLeft: 28, fontWeight: 'bold', fontSize: 16}}>
+          <Text style={{marginLeft: 20, fontWeight: 'bold', fontSize: 16}}>
             2022 May
           </Text>
         </View>
@@ -163,7 +165,7 @@ const HistoryUserComponent = () => {
             </View>
             <View style={{marginLeft: 10}}>
               <Text style={{fontSize: 16}}>Electric XZ-14</Text>
-              <Text style={{fontSize: 10}}>23 May, 19:06</Text>
+              <Text style={{fontSize: 11}}>23 May, 19:06</Text>
             </View>
           </View>
 
@@ -200,7 +202,7 @@ const HistoryUserComponent = () => {
             </View>
             <View style={{marginLeft: 10}}>
               <Text style={{fontSize: 16}}>LITE LY-84</Text>
-              <Text style={{fontSize: 10}}>23 May, 11:50</Text>
+              <Text style={{fontSize: 11}}>23 May, 11:50</Text>
             </View>
           </View>
 
@@ -237,7 +239,7 @@ const HistoryUserComponent = () => {
             </View>
             <View style={{marginLeft: 10}}>
               <Text style={{fontSize: 16}}>Electric XX-28</Text>
-              <Text style={{fontSize: 10}}>23 May, 15:19</Text>
+              <Text style={{fontSize: 11}}>23 May, 15:19</Text>
             </View>
           </View>
 

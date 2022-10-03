@@ -11,7 +11,7 @@ export default StyleSheet.create({
   subTitle: {
     font: 12,
     color: '#666666',
-    paddingTop: 90,
+    marginTop: 50,
   },
 
   textStyle: {
@@ -25,15 +25,6 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     marginTop: 40,
-  },
-
-  section: {
-    borderBottomWidth: 0.2,
-    borderBottomColor: '#666666',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    height: 60,
-    alignItems: 'center',
   },
 
   iconImage3: {
@@ -58,6 +49,7 @@ export default StyleSheet.create({
   },
 
   iconImage2: {
+    marginRight: -20,
     aspectRatio: 1.5,
     flex: 1,
     height: 50,
@@ -65,6 +57,7 @@ export default StyleSheet.create({
   },
 
   iconImage1: {
+    marginLeft: -20,
     aspectRatio: 1.5,
     flex: 1,
     height: 50,
@@ -72,11 +65,27 @@ export default StyleSheet.create({
     opacity: 0,
   },
 
+  label: {
+    fontSize: 12,
+    color: '#666666',
+  },
+
+  sectionDarkTitle: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    height: 100,
+    alignItems: 'center',
+    backgroundColor: '#E4E4E4',
+    marginHorizontal: -20,
+    paddingHorizontal: 20,
+  },
+
   sectionDark: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    height: 60,
+    height: 80,
     alignItems: 'center',
     backgroundColor: '#E4E4E4',
     marginHorizontal: -20,
@@ -87,7 +96,7 @@ export default StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    height: 60,
+    height: 80,
     alignItems: 'center',
     marginHorizontal: -20,
     paddingHorizontal: 20,
