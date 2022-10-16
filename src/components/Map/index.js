@@ -74,8 +74,8 @@ const MapComponent = () => {
           }}>
           <Marker
             coordinate={{
-              latitude: Number(bikeData.lon),
-              longitude: Number(bikeData.lat),
+              latitude: Number(bikeData.lat),
+              longitude: Number(bikeData.lon),
             }}
             pinColor={'#7E5ABB'}>
             <Image
