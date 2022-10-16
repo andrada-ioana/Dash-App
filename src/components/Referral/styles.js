@@ -26,11 +26,9 @@ export default StyleSheet.create({
   iconImage: {
     //aspectRatio: 1.5,
     //flex: 0.1,
-    height: 100,
-    alignSelf: 'flex-end',
-    position: 'absolute',
+    height: 45,
+    alignSelf: 'flex-start',
     //bottom: -100,
-    zIndex: 12,
   },
 
   iconImage2: {
@@ -47,8 +45,6 @@ export default StyleSheet.create({
     height: 280,
     alignSelf: 'center',
     marginTop: 20,
-    position: 'relative',
-    zIndex: 20,
   },
 
   linkBtn: {

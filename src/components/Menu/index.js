@@ -68,40 +68,34 @@ const MenuComponent = () => {
         </TouchableOpacity>
         <View style={styles.statistics}>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
-            <MaterialIcons
-              name="pedal-bike"
-              size={24}
-              style={{marginRight: 10}}
-              color={'#7E5ABB'}
+            <Image
+              source={require('../../assets/images/bike.png')}
+              style={{width: 30, height: 20}}
             />
-            <View>
-              <Text style={{fontWeight: 'bold', fontSize: 12}}>12</Text>
+            <View style={{marginLeft: 6}}>
+              <Text style={{fontWeight: 'bold', fontSize: 12}}>1</Text>
               <Text>Rides</Text>
             </View>
           </View>
 
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
-            <MaterialIcons
-              name="pedal-bike"
-              size={30}
-              style={{marginRight: 10}}
-              color={'#7E5ABB'}
+            <Image
+              source={require('../../assets/images/electricbike.png')}
+              style={{width: 30, height: 20}}
             />
-            <View>
-              <Text style={{fontWeight: 'bold', fontSize: 12}}>7</Text>
+            <View style={{marginLeft: 8}}>
+              <Text style={{fontWeight: 'bold', fontSize: 12}}>4</Text>
               <Text>Rides</Text>
             </View>
           </View>
 
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
-            <MaterialIcons
-              name="pedal-bike"
-              size={30}
-              style={{marginRight: 10}}
-              color={'#7E5ABB'}
+            <Image
+              source={require('../../assets/images/location2.png')}
+              style={{width: 30, height: 30}}
             />
-            <View>
-              <Text style={{fontWeight: 'bold', fontSize: 12}}>94</Text>
+            <View style={{marginLeft: 3}}>
+              <Text style={{fontWeight: 'bold', fontSize: 12}}>9</Text>
               <Text>Km</Text>
             </View>
           </View>
@@ -115,7 +109,7 @@ const MenuComponent = () => {
             style={{
               flexDirection: 'row',
               alignItems: 'center',
-              marginLeft: 15,
+              marginLeft: 16.5,
             }}>
             <Octicons name="credit-card" size={24} style={{marginRight: 20}} />
             <Text>Payment</Text>
@@ -129,7 +123,7 @@ const MenuComponent = () => {
             style={{
               flexDirection: 'row',
               alignItems: 'center',
-              marginLeft: 15,
+              marginLeft: 13,
               marginTop: 25,
             }}>
             <MaterialIcons name="history" size={28} style={{marginRight: 20}} />
@@ -150,7 +144,7 @@ const MenuComponent = () => {
             <Ionicons
               name="pricetag-outline"
               size={28}
-              style={{marginRight: 20}}
+              style={{marginRight: 18}}
             />
             <Text>Promo codes</Text>
           </View>
@@ -169,7 +163,7 @@ const MenuComponent = () => {
             <SimpleLineIcons
               name="present"
               size={24}
-              style={{marginRight: 20}}
+              style={{marginRight: 22}}
             />
             <Text>Free credits</Text>
           </View>
@@ -200,10 +194,9 @@ const MenuComponent = () => {
               marginLeft: 15,
               marginTop: 25,
             }}>
-            <MaterialCommunityIcons
-              name="chat-question-outline"
-              size={30}
-              style={{marginRight: 17}}
+            <Image
+              source={require('../../assets/images/helpIcon.png')}
+              style={{width: 24, height: 24, marginRight: 22}}
             />
             <Text>Help</Text>
           </View>
@@ -238,7 +231,7 @@ const MenuComponent = () => {
             </View>
           </View>
         </TouchableOpacity>
-        <Text style={{marginTop: 60}}>Dash v1.5</Text>
+        <Text style={{marginTop: 60}}>Dash v0.6</Text>
       </View>
     </Container>
   );

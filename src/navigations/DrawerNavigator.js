@@ -23,6 +23,7 @@ import {
   LOGIN,
   MAP,
   MENU,
+  END_RIDE,
 } from '../constants/routeNames';
 import MenuComponent from '../components/Menu';
 import RegisterComponent from '../components/Signup';
@@ -42,6 +43,7 @@ import AgreementComponent from '../components/Agreement';
 import LoginComponent from '../components/Login';
 import MapComponent from '../components/Map';
 import {Image} from 'react-native';
+import EndRideComponent from '../components/EndRide';
 
 const DrawerNavigator = ({navigation}) => {
   const Drawer = createDrawerNavigator();
@@ -64,6 +66,11 @@ const DrawerNavigator = ({navigation}) => {
       <Drawer.Screen
         name={MENU}
         component={MenuComponent}
+        options={{headerShown: false}}
+      />
+      <Drawer.Screen
+        name={END_RIDE}
+        component={EndRideComponent}
         options={{headerShown: false}}
       />
       <Drawer.Screen

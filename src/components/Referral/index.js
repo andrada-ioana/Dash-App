@@ -27,11 +27,14 @@ const ReferralComponent = () => {
           marginTop: -20,
         }}
       />
-      <View>
-        <Image
-          source={require('../../assets/images/referral.png')}
-          style={styles.logoImage}
-        />
+
+      <View
+        style={{
+          position: 'absolute',
+          zIndex: 1,
+          marginLeft: '70%',
+          marginTop: '10%',
+        }}>
         <TouchableOpacity
           onPress={() => {
             navigate(HOME_NAVIGATOR);
@@ -43,7 +46,15 @@ const ReferralComponent = () => {
           />
         </TouchableOpacity>
       </View>
-      <View style={{position: 'static', zIndex: -1}}>
+
+      <View style={{position: 'relative', zIndex: -1}}>
+        <Image
+          source={require('../../assets/images/referral.png')}
+          style={styles.logoImage}
+        />
+      </View>
+
+      <View style={{}}>
         <Text
           style={{
             fontWeight: 'bold',

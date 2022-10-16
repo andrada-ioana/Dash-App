@@ -201,7 +201,7 @@ const HistoryUserComponent = () => {
               />
             </View>
             <View style={{marginLeft: 10}}>
-              <Text style={{fontSize: 16}}>LITE LY-84</Text>
+              <Text style={{fontSize: 16}}>Lite LY-84</Text>
               <Text style={{fontSize: 11}}>23 May, 11:50</Text>
             </View>
           </View>

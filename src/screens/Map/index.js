@@ -5,6 +5,7 @@ import {TouchableOpacity} from 'react-native-gesture-handler';
 import MapComponent from '../../components/Map';
 
 const Map = () => {
+
   const [value, onChangeText] = React.useState('');
   
   return <MapComponent />;

@@ -48,7 +48,7 @@ const AuthNavigator = () => {
   );
 };
 /**
- * <AuthStack.Screen name={SCAN_QR} component={ScanQR} />
+ * 
  *       <AuthStack.Screen name={REFERRAL} component={Referral} />
 <AuthStack.Screen name={PROMOTIONS} component={Promotions} />
  * <AuthStack.Screen name={SUBSCRIPTION} component={Subscription} />

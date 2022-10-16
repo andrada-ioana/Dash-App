@@ -11,6 +11,7 @@ import {HOME_NAVIGATOR} from '../../constants/routeNames';
 
 const AboutComponent = () => {
   const {navigate} = useNavigation();
+
   return (
     <Container>
       <View style={styles.navBar}>
