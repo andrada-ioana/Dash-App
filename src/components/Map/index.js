@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, TouchableOpacity, Image} from 'react-native';
+import {View, Text, TouchableOpacity, Image, Linking} from 'react-native';
 import styles from './styles';
 import Container from '../common/Container';
 import MapView, {Marker} from 'react-native-maps';
@@ -16,6 +16,7 @@ import HomeNavigator from '../../navigations/HomeNavigator';
 import CustomButtonIcon from '../common/CustomButtonIcon';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
+import FeatherIcons from 'react-native-vector-icons/Feather';
 import {DrawerActions, useRoute} from '@react-navigation/native';
 import {useNavigation} from '@react-navigation/native';
 import 'react-native-gesture-handler';
@@ -74,8 +75,10 @@ const MapComponent = () => {
           }}>
           <Marker
             coordinate={{
-              latitude: Number(bikeData.lat),
-              longitude: Number(bikeData.lon),
+              latitude: 46.7514,
+              longitude: 23.5758,
+              //latitude: Number(bikeData.lat),
+              //longitude: Number(bikeData.lon),
             }}
             pinColor={'#7E5ABB'}>
             <Image
@@ -85,7 +88,8 @@ const MapComponent = () => {
           </Marker>
         </MapView>
       </View>
-      <View
+      {/**
+       <View
         style={{
           position: 'absolute',
           zIndex: 1000,
@@ -99,6 +103,8 @@ const MapComponent = () => {
           />
         </TouchableOpacity>
       </View>
+       */}
+
       <View
         style={{
           position: 'absolute',
@@ -106,15 +112,16 @@ const MapComponent = () => {
           bottom: '5.5%',
           alignSelf: 'flex-end',
         }}>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => Linking.openURL('https://ridedash.eu/')}>
           <Image
-            source={require('../../assets/images/filter.png')}
+            source={require('../../assets/images/exclamation.png')}
             style={{height: 70, width: 70}}
           />
         </TouchableOpacity>
       </View>
-
-      <View
+      {/**
+ <View
         style={{
           position: 'absolute',
           zIndex: 1000,
@@ -128,6 +135,8 @@ const MapComponent = () => {
           />
         </TouchableOpacity>
       </View>
+ */}
+
       <View
         style={{
           position: 'absolute',
@@ -175,22 +184,41 @@ const MapComponent = () => {
         <View>
           <CustomButtonIcon
             title="Scan"
+            //title={typeof ('' + bikeData.lon)}
             icon={<MaterialCommunityIcons name="line-scan" size={20} />}
           />
         </View>
       </TouchableOpacity>
-
-      <View style={{flex: 1}}>
+      {/**
+  <View style={{flex: 1}}>
         <SlidingPanel
           slidingPanelLayoutHeight={'50%'}
           slidingPanelLayout={() => (
-            <View style={{backgroundColor: 'white', width: 500}}>
-              <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <View
+              style={{
+                backgroundColor: 'white',
+                width: 390,
+                marginHorizontal: -20,
+                paddingHorizontal: 20,
+                borderRadius: 25,
+              }}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  marginTop: 5,
+                }}>
                 <Image
                   source={require('../../assets/images/battery.png')}
                   style={{width: 50, height: 50}}
                 />
-                <Text style={{fontSize: 20, fontWeight: 'bold'}}>
+                <Text
+                  style={{
+                    fontSize: 20,
+                    fontWeight: 'bold',
+                    marginLeft: 15,
+                    marginRight: 35,
+                  }}>
                   23 km range
                 </Text>
                 <TouchableOpacity
@@ -198,21 +226,24 @@ const MapComponent = () => {
                     flexDirection: 'row',
                     alignItems: 'center',
                     backgroundColor: '#F3F3F3',
+                    paddingHorizontal: 15,
+                    paddingVertical: 5,
+                    borderRadius: 30,
                   }}>
-                  <EvilIcons name="bell" size={30} />
+                  <EvilIcons name="bell" size={25} />
                   <Text>Ring</Text>
                 </TouchableOpacity>
                 <TouchableOpacity>
                   <Image
                     source={require('../../assets/images/xIcon2.png')}
-                    style={{height: 70, width: 70}}
+                    style={{height: 60, width: 60}}
                   />
                 </TouchableOpacity>
               </View>
               <View style={{flexDirection: 'row', alignItems: 'center'}}>
                 <MaterialIcons
                   name="electric-bike"
-                  size={30}
+                  size={25}
                   color={'#666666'}
                   style={{marginHorizontal: 10}}
                 />
@@ -229,12 +260,45 @@ const MapComponent = () => {
               </View>
               <Image
                 source={require('../../assets/images/bike.jpeg')}
-                style={{height: 200, width: 300, marginHorizontal: 40}}
+                style={{
+                  height: 200,
+                  width: 300,
+                  marginHorizontal: 30,
+                  marginTop: 20,
+                }}
               />
+              <TouchableOpacity
+                style={{
+                  flexDirection: 'row',
+                  alignSelf: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: '#F3F3F3',
+                  paddingHorizontal: 15,
+                  paddingVertical: 6,
+                  borderRadius: 30,
+                  width: 150,
+                  marginTop: 30,
+                }}>
+                <FeatherIcons name="alert-triangle" size={20} />
+                <Text>Report issue</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={{
+                  width: '70%',
+                  alignSelf: 'center',
+                }}>
+                <View>
+                  <CustomButtonIcon
+                    title="Reserve"
+                    icon={<FeatherIcons name="lock" size={20} />}
+                  />
+                </View>
+              </TouchableOpacity>
             </View>
           )}
         />
       </View>
+ */}
     </Container>
   );
 };

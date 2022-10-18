@@ -41,6 +41,7 @@ export default StyleSheet.create({
 
   logoImage: {
     aspectRatio: 1.4,
+    marginHorizontal: '120%',
     flex: 1,
     height: 280,
     alignSelf: 'center',
