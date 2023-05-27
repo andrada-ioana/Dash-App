@@ -9,6 +9,7 @@ export default StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     margin: 0,
+    overflowY: 'hidden',
   },
 
   text: {
@@ -17,9 +18,39 @@ export default StyleSheet.create({
   },
 
   map: {
-    width: '115%',
-    height: 900,
+    width: '111.5%',
+    height: 895,
     marginTop: -20,
     margin: 0,
+  },
+
+  popupContainer: {
+    backgroundColor: '#fefefe',
+    padding: 20,
+    paddingTop: 10,
+    paddingBottom: 100,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    width: '111.5%',
+    marginLeft: -20,
+  },
+
+  topRow: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+
+  range: {
+    fontWeight: '700',
+    fontSize: 20,
+  },
+
+  popupRow: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 16,
   },
 });

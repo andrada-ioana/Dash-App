@@ -18,6 +18,7 @@ import {
   PROMOTIONS,
   REFERRAL,
   SUBSCRIPTION,
+  SCAN_QR,
 } from '../constants/routeNames';
 import Login from '../screens/Login';
 import Register from '../screens/Register';
@@ -37,6 +38,7 @@ import Vip from '../screens/VIP';
 import Promotions from '../screens/Promotions';
 import Referral from '../screens/Referral';
 import SubscriptionPlans from '../screens/SubscriptionPlans';
+import ScanQR from '../screens/ScanQR';
 
 const AuthNavigator = () => {
   const AuthStack = createStackNavigator();
@@ -44,6 +46,7 @@ const AuthNavigator = () => {
     <AuthStack.Navigator screenOptions={{headerShown: false}}>
       <AuthStack.Screen name={LOGIN} component={Login} />
       <AuthStack.Screen name={REGISTER} component={Register} />
+      <AuthStack.Screen name={'ScanQR'} component={ScanQR} />
     </AuthStack.Navigator>
   );
 };

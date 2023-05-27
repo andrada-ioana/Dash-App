@@ -11,6 +11,7 @@ import {
   MENU,
   PAYMENT,
   SAFETY_CENTER,
+  SCAN_QR,
 } from '../../constants/routeNames';
 import HomeNavigator from '../../navigations/HomeNavigator';
 import CustomButtonIcon from '../common/CustomButtonIcon';
@@ -29,6 +30,9 @@ import axios from 'axios';
 import {LogBox} from 'react-native';
 LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
 LogBox.ignoreAllLogs(); //Ignore all log notifications
+
+import SlidingUpPanel from 'rn-sliding-up-panel';
+import ScanQR from '../../screens/ScanQR';
 
 const MapComponent = () => {
   const {navigate} = useNavigation();
@@ -68,23 +72,26 @@ const MapComponent = () => {
         <MapView
           style={styles.map}
           initialRegion={{
-            latitude: 46.7514,
-            longitude: 23.5758,
+            latitude: 46.7655267,
+            longitude: 23.605057,
             latitudeDelta: 0.04,
             longitudeDelta: 0.05,
           }}>
           <Marker
+            onPress={() => this._panel.show()}
             coordinate={{
-              latitude: 46.7514,
-              longitude: 23.5758,
+              latitude: 46.7655267,
+              longitude: 23.605057,
               //latitude: Number(bikeData.lat),
               //longitude: Number(bikeData.lon),
             }}
             pinColor={'#7E5ABB'}>
-            <Image
-              source={require('../../assets/images/bikeicon.png')}
-              style={{height: 40, width: 40}}
-            />
+            <TouchableOpacity onPress={() => this._panel.close()}>
+              <Image
+                source={require('../../assets/images/bikeicon.png')}
+                style={{height: 40, width: 40}}
+              />
+            </TouchableOpacity>
           </Marker>
         </MapView>
       </View>
@@ -158,7 +165,7 @@ const MapComponent = () => {
         style={{
           position: 'absolute',
           zIndex: 1000,
-          top: '4%',
+          top: '2%',
           alignSelf: 'flex-start',
         }}>
         <TouchableOpacity>
@@ -172,7 +179,8 @@ const MapComponent = () => {
       <TouchableOpacity
         onPress={() => {
           SendData();
-          navigate(END_RIDE);
+          //navigate(END_RIDE);
+          navigate(SCAN_QR);
         }}
         style={{
           width: '70%',
@@ -189,116 +197,117 @@ const MapComponent = () => {
           />
         </View>
       </TouchableOpacity>
-      {/**
-  <View style={{flex: 1}}>
-        <SlidingPanel
-          slidingPanelLayoutHeight={'50%'}
-          slidingPanelLayout={() => (
-            <View
+      <View>
+        <SlidingUpPanel
+          ref={c => (this._panel = c)}
+          draggableRange={{top: 420, bottom: 0}}>
+          <View style={styles.popupContainer}>
+            <View style={styles.topRow}>
+              <Image
+                source={require('../../assets/images/battery-placeholder.png')}
+                style={{height: 50, width: 50, alignSelf: 'center'}}
+              />
+              <Text style={styles.range}>23 km range</Text>
+              <TouchableOpacity onPress={() => this._panel.hide()}>
+                <View>
+                  <TouchableOpacity style={styles.ringBtn}>
+                    <View
+                      style={{
+                        flexDirection: 'row',
+                        backgroundColor: '#F3F3F3',
+                        paddingVertical: 10,
+                        paddingHorizontal: 20,
+                        borderRadius: 19,
+                        borderWidth: 1,
+                        borderColor: '#F3F3F3',
+                        overflow: 'hidden',
+                      }}>
+                      <Image
+                        source={require('../../assets/images/bell-icon.png')}
+                        style={{height: 16, width: 16, alignSelf: 'center'}}
+                      />
+                      <Text
+                        style={{
+                          marginLeft: 5,
+                          fontWeight: 'bold',
+                          color: '#555555',
+                          fontSize: 12,
+                        }}>
+                        Ring
+                      </Text>
+                    </View>
+                  </TouchableOpacity>
+                </View>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => this._panel.hide()}
+                style={styles.closeIcon}>
+                <Image
+                  source={require('../../assets/images/close.png')}
+                  style={{height: 40, width: 40}}
+                />
+              </TouchableOpacity>
+            </View>
+            <View style={styles.popupRow}>
+              <Image
+                source={require('../../assets/images/electric-bike.png')}
+                style={{height: 18, width: 24}}
+              />
+              <Text style={{marginLeft: 10, color: '#666666'}}>
+                Dash <Text style={{fontWeight: 'bold'}}>Electric </Text>
+                XX-21
+              </Text>
+            </View>
+            <View style={styles.popupRow}>
+              <Image
+                source={require('../../assets/images/credit-card.png')}
+                style={{height: 18, width: 24}}
+              />
+              <Text style={{marginLeft: 10, color: '#666666'}}>
+                <Text style={{fontWeight: 'bold'}}>0.55 </Text>
+                RON/min
+              </Text>
+            </View>
+            <Image
+              source={require('../../assets/images/dash-bike.png')}
               style={{
-                backgroundColor: 'white',
-                width: 390,
-                marginHorizontal: -20,
-                paddingHorizontal: 20,
-                borderRadius: 25,
-              }}>
+                height: 133,
+                width: 200,
+                alignSelf: 'center',
+                marginBottom: 20,
+              }}
+            />
+            <TouchableOpacity style={styles.ringBtn}>
               <View
                 style={{
                   flexDirection: 'row',
-                  alignItems: 'center',
-                  marginTop: 5,
+                  backgroundColor: '#F3F3F3',
+                  paddingVertical: 10,
+                  paddingHorizontal: 20,
+                  borderRadius: 19,
+                  borderWidth: 1,
+                  borderColor: '#F3F3F3',
+                  overflow: 'hidden',
+                  alignSelf: 'center',
                 }}>
                 <Image
-                  source={require('../../assets/images/battery.png')}
-                  style={{width: 50, height: 50}}
+                  source={require('../../assets/images/issue-icon.png')}
+                  style={{height: 16, width: 16, alignSelf: 'center'}}
                 />
                 <Text
                   style={{
-                    fontSize: 20,
+                    marginLeft: 5,
                     fontWeight: 'bold',
-                    marginLeft: 15,
-                    marginRight: 35,
+                    color: '#555555',
+                    fontSize: 12,
                   }}>
-                  23 km range
+                  Report issue
                 </Text>
-                <TouchableOpacity
-                  style={{
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    backgroundColor: '#F3F3F3',
-                    paddingHorizontal: 15,
-                    paddingVertical: 5,
-                    borderRadius: 30,
-                  }}>
-                  <EvilIcons name="bell" size={25} />
-                  <Text>Ring</Text>
-                </TouchableOpacity>
-                <TouchableOpacity>
-                  <Image
-                    source={require('../../assets/images/xIcon2.png')}
-                    style={{height: 60, width: 60}}
-                  />
-                </TouchableOpacity>
               </View>
-              <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                <MaterialIcons
-                  name="electric-bike"
-                  size={25}
-                  color={'#666666'}
-                  style={{marginHorizontal: 10}}
-                />
-                <Text style={{color: '#666666'}}>Dash Electric XX-21</Text>
-              </View>
-              <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                <EvilIcons
-                  name="credit-card"
-                  size={30}
-                  color={'#666666'}
-                  style={{marginHorizontal: 10}}
-                />
-                <Text style={{color: '#666666'}}>0.5 RON/min</Text>
-              </View>
-              <Image
-                source={require('../../assets/images/bike.jpeg')}
-                style={{
-                  height: 200,
-                  width: 300,
-                  marginHorizontal: 30,
-                  marginTop: 20,
-                }}
-              />
-              <TouchableOpacity
-                style={{
-                  flexDirection: 'row',
-                  alignSelf: 'center',
-                  justifyContent: 'center',
-                  backgroundColor: '#F3F3F3',
-                  paddingHorizontal: 15,
-                  paddingVertical: 6,
-                  borderRadius: 30,
-                  width: 150,
-                  marginTop: 30,
-                }}>
-                <FeatherIcons name="alert-triangle" size={20} />
-                <Text>Report issue</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={{
-                  width: '70%',
-                  alignSelf: 'center',
-                }}>
-                <View>
-                  <CustomButtonIcon
-                    title="Reserve"
-                    icon={<FeatherIcons name="lock" size={20} />}
-                  />
-                </View>
-              </TouchableOpacity>
-            </View>
-          )}
-        />
+            </TouchableOpacity>
+          </View>
+        </SlidingUpPanel>
       </View>
- */}
     </Container>
   );
 };

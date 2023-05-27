@@ -24,6 +24,7 @@ import {
   MAP,
   MENU,
   END_RIDE,
+  SCAN_QR,
 } from '../constants/routeNames';
 import MenuComponent from '../components/Menu';
 import RegisterComponent from '../components/Signup';
@@ -44,6 +45,8 @@ import LoginComponent from '../components/Login';
 import MapComponent from '../components/Map';
 import {Image} from 'react-native';
 import EndRideComponent from '../components/EndRide';
+import Camera from '../components/Camera';
+import ScanQR from '../screens/ScanQR';
 
 const DrawerNavigator = ({navigation}) => {
   const Drawer = createDrawerNavigator();
@@ -66,6 +69,11 @@ const DrawerNavigator = ({navigation}) => {
       <Drawer.Screen
         name={MENU}
         component={MenuComponent}
+        options={{headerShown: false}}
+      />
+      <Drawer.Screen
+        name={SCAN_QR}
+        component={ScanQR}
         options={{headerShown: false}}
       />
       <Drawer.Screen

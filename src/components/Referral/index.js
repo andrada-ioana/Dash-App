@@ -21,10 +21,12 @@ const ReferralComponent = () => {
         style={{
           backgroundColor: '#B6A0D7',
           width: 1000,
-          height: 40,
+          height: 340,
           marginLeft: -100,
           marginBottom: -20,
           marginTop: -20,
+          position: 'absolute',
+          zIndex: -1,
         }}
       />
 

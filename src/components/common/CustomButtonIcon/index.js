@@ -4,7 +4,14 @@ import {TouchableOpacity} from 'react-native-gesture-handler';
 import colors from '../../../assets/theme/colors';
 import styles from './styles';
 
-const CustomButtonIcon = ({icon, title, primary, disabled, loading, onPress}) => {
+const CustomButtonIcon = ({
+  icon,
+  title,
+  primary,
+  disabled,
+  loading,
+  onPress,
+}) => {
   return (
     <TouchableOpacity
       disabled={disabled}
@@ -18,7 +25,7 @@ const CustomButtonIcon = ({icon, title, primary, disabled, loading, onPress}) =>
         )}
         {title && (
           <Text style={{color: 'white', fontWeight: 'bold', fontSize: 16}}>
-            {icon}  {title}
+            {icon} {title}
           </Text>
         )}
       </View>
